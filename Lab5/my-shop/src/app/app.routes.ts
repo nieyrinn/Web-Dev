@@ -5,9 +5,9 @@ import { ProductItemComponent } from './product-item/product-item.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
-  { path: '', component: ProductCategoryComponent }, // Главная - список категорий
-  { path: 'category/:name', component: ProductListComponent }, // Страница товаров в категории
-  { path: 'product/:id', component: ProductItemComponent } // Страница конкретного товара
+  { path: '', component: ProductCategoryComponent }, 
+  { path: 'category/:name', component: ProductListComponent },
+  { path: 'product/:id', component: ProductItemComponent } 
 ];
 
 @NgModule({

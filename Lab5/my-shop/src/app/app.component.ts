@@ -11,10 +11,6 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'my-shop'
-  categories = [
-    { name: 'Toys' },
-    { name: 'Electronics' }
-  ];
 
   constructor(private router: Router) {}
 

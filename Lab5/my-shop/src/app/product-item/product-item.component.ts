@@ -15,6 +15,14 @@ export class ProductItemComponent {
   product: any = null;
   categoryName: string = '';
 
+  shareOnWhatsApp(link: string) {
+    window.open(`https://wa.me/?text=${encodeURIComponent(link)}`, '_blank');
+  }
+  
+  shareOnTelegram(link: string) {
+    window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}`, '_blank');
+  }
+
   constructor(private route: ActivatedRoute, private router: Router, private productService: ProductService) {
     this.route.paramMap.subscribe(params => {
       const productId = Number(params.get('id'));
@@ -26,19 +34,13 @@ export class ProductItemComponent {
     });
   }
 
+
   likeProduct() {
     this.productService.likeProduct(this.product.id);
   }
 
   deleteProduct() {
-    this.productService.deleteProduct(this.product.id);
-    this
-}
-shareOnWhatsApp(link: string) {
-  window.open(`https://wa.me/?text=${encodeURIComponent(link)}`, '_blank');
-}
-
-shareOnTelegram(link: string) {
-  window.open(`https://t.me/share/url?url=${encodeURIComponent(link)}`, '_blank');
-}
+   this.productService.deleteProduct(this.product.id);
+   this.router.navigate(['/']);
+  }
 }
