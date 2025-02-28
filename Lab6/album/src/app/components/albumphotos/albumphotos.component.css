@@ -1,0 +1,41 @@
+h2 {
+    color: #d000a2;
+    font-size: 2.5em;
+    margin: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0b5ff58;
+    border-radius: 30px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  .photo-card {
+    display: grid;
+    grid-template-columns: repeat(15px, 5fr);
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px;
+    width: 150px;
+    background-color: #f0b5ff38;
+    box-shadow: 0 4px 6px rgba(253, 155, 199, 0.693);
+  }
+  .photo-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  button {
+    background-color: #ffb9ec59;
+    color: rgb(114, 24, 91);
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
